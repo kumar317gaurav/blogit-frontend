@@ -4,21 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './features/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { LoginComponent } from './features/login/login.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule 
+    FormsModule,HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
