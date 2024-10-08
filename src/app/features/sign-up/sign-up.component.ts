@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignupComponent {
+  user = {
+    username: '',
+    email: '',
+    password: ''
+  };
+
+  constructor(private authService: AuthService) { }
+
   onSubmit() {
-    console.log('Form submitted!');
+    console.log('User data:', this.user);
+    this.authService.signup(this.user).subscribe(response => {
+      console.log('User signed up successfully!', response);
+    }, error => {
+      console.error('Error signing up user', error);
+    });
   }
 }
