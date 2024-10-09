@@ -1,0 +1,19 @@
+<aside>
+    <div class="catSection">
+    <div class="popularCat">
+      <h3>Popular Categories</h3>
+      <ul *ngFor="let category of categories">{{category}}</ul>
+    </div>
+
+    <form class="searchForm">
+      <h3>Search Your Favoritre Blogs!</h3>
+      <input
+        type="text"
+        class="parameter"
+        name="parameter"
+        placeholder="Search by blog category or title"
+      />
+      <input type="submit" class="submit" value="Search" />
+    </form>
+  </div>
+</aside>
