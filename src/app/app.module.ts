@@ -8,13 +8,15 @@ import { LoginComponent } from './features/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CreateBlogComponent } from './features/create-blog/create-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    SignupComponent
+    SignupComponent,
+    CreateBlogComponent
   ],
   imports: [
     BrowserModule,
