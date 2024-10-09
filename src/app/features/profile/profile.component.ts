@@ -48,16 +48,7 @@ export class ProfileComponent implements OnInit {
   createPost(): void {
     const title = prompt('Enter post title:');
     const content = prompt('Enter post content:');
-    if (title && content) {
-      const newPost: Post = {
-        id: this.user.posts.length + 1,
-        title,
-        content,
-        imageUrl: 'https://via.placeholder.com/150',
-        date: new Date().toISOString()
-      };
-      this.postService.createPost(newPost).subscribe(post => this.user.posts.push(post));
-    }
+    
   }
 
   editPost(index: number): void {

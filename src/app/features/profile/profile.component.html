@@ -13,16 +13,15 @@
       <button (click)="createPost()">Create Post</button>
     </div>
     <div class="user-posts">
-        <h3 class="posts-title">User's Posts</h3>
+        <h3 class="posts-title">User's Posts</h3>-
       <div class="card" *ngFor="let post of user.posts; let i = index">
         <img [src]="post.imageUrl" alt="Post Image" class="card-img-top">
         <div class="card-body">
           <h4 class="card-title">{{ post.title }}</h4>
           <p class="card-text">{{ post.content }}</p>
-          <p class="card-date">{{ post.date | date }}</p>
+          <p class="card-date">{{ post.date}}</p>
           <button (click)="editPost(i)" class="btn btn-primary">Edit</button>
         </div>
       </div>
     </div>
   </div>
-  
