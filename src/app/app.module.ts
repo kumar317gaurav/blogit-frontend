@@ -20,7 +20,8 @@ import { CreateBlogComponent } from './features/create-blog/create-blog.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule,HttpClientModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
