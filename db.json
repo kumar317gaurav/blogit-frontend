@@ -103,5 +103,63 @@
     {
       "id": "1825"
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Post",
+      "content": "This is the content of the first post.",
+      "imageUrl": "https://media.istockphoto.com/id/1300859869/photo/contrast-green.jpg?s=2048x2048&w=is&k=20&c=EAB8BznSTeMxRLKg9asi0gv35U73xIlf6CLUB9fsqEs=",
+      "date": "2024-10-09T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "content": "This is the content of the second post.",
+      "imageUrl": "https://media.istockphoto.com/id/1300859869/photo/contrast-green.jpg?s=2048x2048&w=is&k=20&c=EAB8BznSTeMxRLKg9asi0gv35U73xIlf6CLUB9fsqEs=",
+      "date": "2024-10-08T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Third Post",
+      "content": "This is the content of the second post.",
+      "imageUrl": "https://media.istockphoto.com/id/1300859869/photo/contrast-green.jpg?s=2048x2048&w=is&k=20&c=EAB8BznSTeMxRLKg9asi0gv35U73xIlf6CLUB9fsqEs=",
+      "date": "2024-10-08T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Fourth Post",
+      "content": "This is the content of the second post.",
+      "imageUrl": "https://media.istockphoto.com/id/1300859869/photo/contrast-green.jpg?s=2048x2048&w=is&k=20&c=EAB8BznSTeMxRLKg9asi0gv35U73xIlf6CLUB9fsqEs=",
+      "date": "2024-10-08T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Third post",
+      "content": "this is the content of the third post",
+      "imageUrl": "https://via.placeholder.com/150",
+      "date": "2024-10-09T17:33:55.319Z"
+    },
+    {
+      "id": 4,
+      "title": "4th post",
+      "content": "this ",
+      "imageUrl": "https://via.placeholder.com/150",
+      "date": "2024-10-09T17:34:15.506Z"
+    },
+    {
+      "id": 7,
+      "title": "yy",
+      "content": "uu",
+      "imageUrl": "https://via.placeholder.com/150",
+      "date": "2024-10-09T18:28:28.764Z"
+    },
+    {
+      "id": 8,
+      "title": "wqejhjwh",
+      "content": "wbnjhwkqj",
+      "imageUrl": "https://via.placeholder.com/150",
+      "date": "2024-10-09T18:38:40.601Z"
+    }
   ]
 }

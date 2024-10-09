@@ -1,0 +1,8 @@
+.postSection{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 40px;
+}
