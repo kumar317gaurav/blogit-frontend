@@ -8,6 +8,7 @@ import { LoginComponent } from './features/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './features/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     NavbarComponent,
     SignupComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule,HttpClientModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
