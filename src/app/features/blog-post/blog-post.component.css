@@ -1,0 +1,41 @@
+.postSection{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 40px;
+}
+.post{
+    width: 42%;
+    height: 500px;
+    box-shadow: 2px 8px 8px 2px gray;
+    cursor: pointer;
+    position: relative;
+}
+
+.post img{
+    width: 100%;
+}
+
+.postContent{
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.postTitle{
+    text-align: center;
+}
+
+.postDesc{
+    font-size: 18px;
+}
+
+.postDate{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
