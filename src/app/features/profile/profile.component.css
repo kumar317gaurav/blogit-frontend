@@ -1,0 +1,139 @@
+
+
+.profile-title {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-title h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-details {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.user-details h2 {
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.user-details p {
+    color: #777;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.user-details button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-details button:hover {
+    background-color: #0056b3;
+}
+
+.user-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.posts-title {
+    text-align: center;
+    font-size: 2rem; /* Increased font size */
+    color: #333;
+    margin-bottom: 15px; /* Space below the title */
+    width: 100%; /* Full width for alignment */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.33% - 20px); /* Adjust width to fit 3 cards */
+    max-width: calc(33.33% - 20px); /* Ensure cards don't exceed 3 in a row */
+    min-width: 250px; /* Minimum width for cards */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 150px; /* Adjust height for smaller cards */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px; /* Reduced padding */
+}
+
+.card-title {
+    font-size: 1rem; /* Smaller title font */
+    color: #333;
+    margin: 5px 0;
+}
+
+.card-text {
+    font-size: 0.9rem; /* Smaller text */
+    color: #555;
+}
+
+.card-date {
+    font-size: 0.8rem; /* Smaller date font */
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+  
+  
