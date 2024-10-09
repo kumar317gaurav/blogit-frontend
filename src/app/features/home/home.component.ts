@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Post } from '../../data/post';
+import { HeroComponent } from '../hero/hero.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
