@@ -92,6 +92,16 @@
       "id": "220b",
       "email": "addanki.yasaswini@siemens.com",
       "password": "12345csw"
+    },
+    {
+      "id": "e3a2",
+      "email": "gouravkrsingh4096@gmail.com",
+      "password": "1223456"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1825"
     }
   ]
 }
