@@ -9,6 +9,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CreateBlogComponent } from './features/create-blog/create-blog.component';
+import { ProfileComponent } from './features/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreateBlogComponent } from './features/create-blog/create-blog.componen
     LoginComponent,
     NavbarComponent,
     SignupComponent,
-    CreateBlogComponent
+    CreateBlogComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
