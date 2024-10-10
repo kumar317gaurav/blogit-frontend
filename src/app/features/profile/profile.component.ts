@@ -36,7 +36,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.fetchPosts();
   }
-
+deleteBlog(id:any):void{
+  this.postService.delete_blog(id).subscribe({
+    next:(ress:any)=>{
+      console.log("Delete sucess");
+    }
+  })
+}
   fetchPosts(): void {
     this.postService.getPosts().subscribe(posts => this.user.posts = posts);
   }
@@ -45,11 +51,7 @@ export class ProfileComponent implements OnInit {
     console.log('Edit Profile button clicked');
   }
 
-  createPost(): void {
-    const title = prompt('Enter post title:');
-    const content = prompt('Enter post content:');
-    
-  }
+  
 
   editPost(index: number): void {
     const post = this.user.posts[index];

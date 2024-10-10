@@ -21,7 +21,9 @@ export class PostService {
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.apiUrl);
   }
-
+ delete_blog(id:any):Observable<any>{
+  return this.http.post(this.apiUrl,id);
+ }
   createPost(post: Post): Observable<Post> {
     return this.http.post<Post>(this.apiUrl, post);
   }
