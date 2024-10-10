@@ -1,12 +1,12 @@
 <div class="blog-detail" >
     <div class="blog-box">
-      <h1>Title</h1>
-      <p><strong>Author:</strong>name</p>
-      <p><strong>Date:</strong> date</p>
-      <img [src]="" alt="Blog Image" class="blog-photo"/>
+      <h1>{{blog_post?.title}}</h1>
+      <p><strong>Author:</strong>{{blog_post?.author}}</p>
+      <p><strong>Date:</strong> {{blog_post?.date}}</p>
+      <img [src]="blog_post?.image" alt="Blog Image" class="blog-photo"/>
       <div class="description-box">
         <h2>Description</h2>
-        <p>Description.............</p>
+        <p>{{blog_post?.desc}}</p>
       </div>
       <div class="content-box">
         <h2>Content</h2>
@@ -14,4 +14,4 @@
       </div>
     </div>
   </div>
-  <p>blog-details works!</p>
+  

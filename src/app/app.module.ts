@@ -26,7 +26,7 @@ import { HomeComponent } from './features/home/home.component';
     HeroComponent,
     SidebarComponent,
     BlogPostComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
