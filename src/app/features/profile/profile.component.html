@@ -9,8 +9,10 @@
       <p>Email: {{ user.email }}</p>
       <p>Posts: {{ user.posts.length }}</p>
       <p>Liked Posts: {{ user.likedPostsCount }}</p>
-      <button (click)="editProfile()">Edit Profile</button>
-      <button (click)="createPost()">Create Post</button>
+      <button (click)="editProfile()">Edit Posts</button>
+      <button ><a routerLink="/create-blog">Create Post</a></button>
+      
+
     </div>
     <div class="user-posts">
         <h3 class="posts-title">User's Posts</h3>-

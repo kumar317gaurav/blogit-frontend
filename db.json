@@ -99,9 +99,46 @@
       "password": "1223456"
     }
   ],
-  "posts": [
+  "posts_created": [
     {
-      "id": "1825"
+      "id": "d3e6",
+      "title": "Dhoni",
+      "content": "Captain of Indian Cricket Team(Men)",
+      "category": "",
+      "image": "",
+      "categories": ""
+    },
+    {
+      "id": "ba1d",
+      "title": "Dhoni",
+      "content": "Captain of Indian Cricket Team(Men)",
+      "category": "",
+      "image": "",
+      "categories": ""
+    },
+    {
+      "id": "ea56",
+      "title": "Dhoni",
+      "content": "Content",
+      "category": "",
+      "image": "",
+      "categories": ""
+    },
+    {
+      "id": "1495",
+      "title": "Dhoni",
+      "content": "Content",
+      "category": "",
+      "image": "",
+      "categories": ""
+    },
+    {
+      "id": "2764",
+      "title": "Dhoni",
+      "content": "Content",
+      "category": "",
+      "image": "",
+      "categories": ""
     }
   ],
   "posts": [

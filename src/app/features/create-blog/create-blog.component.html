@@ -5,7 +5,7 @@
     <form (ngSubmit)="onSubmit()">
       <div>
         <label for="title">Title:</label>
-        <input type="text" id="title" [(ngModel)]="title" name="title" required>
+        <input type="text" id="title" [(ngModel)]="posts_created.title" name="title" required>
       </div>
       <div class="stat_img">
             <img [src]="image" alt="" *ngIf="image" style="height: 50%; width: 100%;">
@@ -19,14 +19,14 @@
   
       <div>
         <label for="content">Content:</label>
-        <textarea id="content" [(ngModel)]="content" name="content" required></textarea>
+        <textarea id="content" [(ngModel)]="posts_created.content" name="content" required></textarea>
       </div>
   
       <div>
         <label for="category">Category:</label>
-        <select id="category" [(ngModel)]="category" name="category" required>
+        <select id="category" [(ngModel)]="posts_created.category" name="category" required>
           <option value="" disabled selected>Select a category</option>
-          <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+          <option *ngFor="let cat of posts_created.categories" [value]="cat">{{ cat }}</option>
         </select>
       </div>
   
