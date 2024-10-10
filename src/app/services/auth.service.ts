@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
   private apiUrl = 'http://localhost:3000/users';
+  private postUrl = 'http://localhost:3000/posts';
 
   constructor(private http: HttpClient) { }
 
@@ -16,4 +17,9 @@ export class AuthService {
   login(user1: any): Observable<any> {
     return this.http.post(this.apiUrl,user1);
   }
+  createblog(post: any): Observable<any> {
+    return this.http.post(this.apiUrl, post);
+  }
+
+
 }

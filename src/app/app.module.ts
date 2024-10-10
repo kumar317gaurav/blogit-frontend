@@ -14,6 +14,7 @@ import { BlogDetailComponent } from './features/blog-details/blog-details.compon
 import { SidebarComponent } from './features/sidebar/sidebar.component';
 import { BlogPostComponent } from './features/blog-post/blog-post.component';
 import { HomeComponent } from './features/home/home.component';
+import { ProfileComponent } from './features/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { HomeComponent } from './features/home/home.component';
     SidebarComponent,
     BlogPostComponent,
     HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
