@@ -18,7 +18,7 @@ export class AuthService {
     return this.http.post(this.apiUrl,user1);
   }
   createblog(post: any): Observable<any> {
-    return this.http.post(this.postUrl, post);
+    return this.http.post(this.apiUrl, post);
   }
 
 
