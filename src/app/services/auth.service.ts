@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, map, Observable, of } from 'rxjs';
@@ -9,12 +9,29 @@ import { User } from '../models/user';
 })
 export class AuthService {
 
+  private postUrl = 'http://localhost:8080/api/blogs';
+
   private apiUrl = 'http://localhost:8080/api/auth';
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  createblog(post: { title: string, content: string }): Observable<any> {
+
+    const token = localStorage.getItem('jwtToken');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    
+    return this.http.post<any>(`${this.postUrl}/create`, post).pipe(
+      map(response => {
+        return response;
+      }),
+      catchError(error => {
+        console.error('Error creating blog post', error);
+        return of(null);
+      })
+    )}
   signup(user: { username: string, email: string, password: string }): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/signup`, user).pipe(
+
+    return this.http.post<any>(`${this.apiUrl}/register`, user).pipe(
       map(response => {
         return response;
       }),

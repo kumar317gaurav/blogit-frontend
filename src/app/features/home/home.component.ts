@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { Post } from '../../models/post';
-import { HeroComponent } from '../hero/hero.component';
+import { BlogService } from '../../services/blog.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
+  blogsList:Post[]=[];
+  blogService:BlogService=inject(BlogService);
+
+  constructor(){
+    this.blogService.getAllBlogs().then((blogsList:Post[])=>{this.blogsList=blogsList;});
+  }
 }

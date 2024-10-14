@@ -6,15 +6,12 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
 
-  loginForm!: FormGroup;
-  errorMessage!: string;
-
-  hide = true;
-user: any;
+  loginForm: FormGroup;
+  errorMessage: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -28,14 +25,16 @@ user: any;
   }
 
   onSubmit(): void {
-    if(this.loginForm.valid){
-      const {email, password} = this.loginForm.value;
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
 
-      this.authService.login({email: email, password}).subscribe({
+      console.log('Login attempt with email:', email, 'and password:', password);
+
+      this.authService.login({ email, password }).subscribe({
         next: (response) => {
-          const {jwtToken, user} = response;
+          const { jwtToken, user } = response;
 
-          if(jwtToken){
+          if (jwtToken) {
             localStorage.setItem('jwtToken', jwtToken);
             localStorage.setItem('user', JSON.stringify(user));
             this.router.navigate(['/']);
@@ -45,9 +44,11 @@ user: any;
         },
         error: (error) => {
           this.errorMessage = 'Login failed. Please check your credentials.';
+          console.error('Login error:', error);
         }
       });
     }
   }
-
 }
+
+

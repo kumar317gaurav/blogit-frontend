@@ -1,29 +1,21 @@
 // blog-detail.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, Input,OnInit,inject} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
-
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-blog-detail',
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css']
 })
-export class BlogDetailComponent implements OnInit {
-  blog = null;
+export class BlogDetailComponent {
+  route: ActivatedRoute=inject(ActivatedRoute);
+  blogService=inject(BlogService);
+  blog_post:Post|undefined;
+  constructor() {
 
-  constructor(private route: ActivatedRoute, private blogService: BlogService) {}
-
-  ngOnInit() {
-    const blogId = this.route.snapshot.paramMap.get('id');
-    if (blogId) {
-      this.blogService.getBlogById(blogId).subscribe(data => {
-        this.blog = data;
-      });
-    } else {
-      // handle the case where blogId is null
-      console.error('Blog ID is null');
-
+    const blogId = Number(this.route.snapshot.params['id']);
+    this.blogService.getBlogById(blogId).then(blog_post=>{this.blog_post=blog_post;});
   }
-}
 }

@@ -1,45 +1,68 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-create-blog',
   templateUrl: './create-blog.component.html',
   styleUrl: './create-blog.component.css'
 })
-export class CreateBlogComponent {
+export class CreateBlogComponent implements OnInit {
+  
+  posts_created={
+    title: '',
+    content: '',
+    category: '',
+    image: '', 
+    categories: ''
+  }
 
-  title: string = '';
-  content: string = '';
-  category: string = '';
-  image: string | ArrayBuffer | null | undefined = undefined; // Use null as the initial value
 
-  categories: string[] = ['Technology', 'Lifestyle', 'Education', 'Health'];
+  constructor(
+    private http:HttpClient,
+    private authService:AuthService
+  ){}
 
-  // onImageSelected(event: Event) {
-  //   const input = event.target as HTMLInputElement;
-  //   if (input.files) {
-  //     this.image = input.files[0];
-  //   }
-  // }
+  ngOnInit(): void {
+    this.fetchCategories();
+  }
+  fetchCategories() {
+    this.http.get('').subscribe(
+      (response: any) => {
+        console.log(response);
+      }
+    )
+  }
 
+  image: string | ArrayBuffer | null | undefined;
   onImageSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
         const reader = new FileReader();
         reader.onload = (e) => {
-            this.image = e.target?.result; // Set the image variable here
+            this.image = e.target?.result; 
         };
         reader.readAsDataURL(input.files[0]);
     }
 }
 
   onSubmit() {
+
+    //logging to the console to check if process is successful
     const blogData = {
-      title: this.title,
-      content: this.content,
-      category: this.category,
-      image: this.image
+      title: this.posts_created.title,
+      content: this.posts_created.content,
+      category: this.posts_created.category,
+      image: this.posts_created.image
     }
     console.log('Blog Data:', blogData);
+
+    //sending data of the create-blog to db,json in posts_created
+    this.authService.createblog(this.posts_created).subscribe((response: any) => {
+      console.log('Post created successfully', response);
+    }, (error: any) => {
+      console.error('There was en error creating the blog post', error);
+    });
 };
 
 

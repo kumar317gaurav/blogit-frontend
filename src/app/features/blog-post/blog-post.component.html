@@ -1,4 +1,4 @@
-<section class="postSection">
+<div class="container">
     <div class="post">
         <img [src]="post.imageUrl" alt="blog_image">
         <div class="postContent">
@@ -7,6 +7,6 @@
         <p class="postDesc">{{post.desc}}</p>
         <a [routerLink]="['/details',post.id]">Read blog</a>
         </div>
-        <span class="postDate">{{post.date}}</span>
     </div>
-</section>
+</div>
+
