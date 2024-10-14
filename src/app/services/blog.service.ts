@@ -7,6 +7,8 @@ import { Post } from '../data/post';
   providedIn: 'root'
 })
 export class BlogService {
+  protected blogList:Post[]=[];
+
 
   url='http://localhost:3000/blogs';
 
