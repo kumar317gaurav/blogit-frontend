@@ -16,6 +16,6 @@ export class BlogDetailComponent {
   constructor() {
 
     const blogId = Number(this.route.snapshot.params['id']);
-    this.blog_post=this.blogService.getBlogById(blogId);
+    this.blogService.getBlogById(blogId).then(blog_post=>{this.blog_post=blog_post;});
   }
 }

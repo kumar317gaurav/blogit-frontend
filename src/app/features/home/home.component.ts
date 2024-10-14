@@ -11,6 +11,6 @@ export class HomeComponent {
   blogService:BlogService=inject(BlogService);
 
   constructor(){
-    this.blogsList=this.blogService.getAllBlogs();
+    this.blogService.getAllBlogs().then((blogsList:Post[])=>{this.blogsList=blogsList;});
   }
 }

@@ -1,6 +1,6 @@
 // blog.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Post } from '../data/post';
 
 @Injectable({
@@ -9,12 +9,17 @@ import { Post } from '../data/post';
 export class BlogService {
   protected blogList:Post[]=[];
 
-  constructor(private http: HttpClient) {}
 
-  getAllBlogs(): Post[]{
-    return this.blogList;
+  url='http://localhost:3000/blogs';
+
+  constructor() {}
+
+  async getAllBlogs(): Promise<Post[]>{
+    const data= await fetch(this.url);
+    return await data.json() ?? [];
   }
-  getBlogById(id: number):Post | undefined {
-    return this.blogList.find(Post=>Post.id===id);
+  async getBlogById(id: number):Promise<Post | undefined> {
+    const data=await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 }
