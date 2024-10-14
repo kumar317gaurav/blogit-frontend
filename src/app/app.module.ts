@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './features/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeroComponent } from './features/hero/hero.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CreateBlogComponent } from './features/create-blog/create-blog.component';
 import { AboutUsComponent } from './features/about-us/about-us.component';
 import { BlogDetailComponent } from './features/blog-details/blog-details.component';
@@ -15,6 +15,7 @@ import { SidebarComponent } from './features/sidebar/sidebar.component';
 import { BlogPostComponent } from './features/blog-post/blog-post.component';
 import { HomeComponent } from './features/home/home.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,14 @@ import { ProfileComponent } from './features/profile/profile.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent,BlogDetailComponent]
 })
 export class AppModule { }
+

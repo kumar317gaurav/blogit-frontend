@@ -7,16 +7,16 @@ import { BlogDetailComponent } from './features/blog-details/blog-details.compon
 import { HomeComponent } from './features/home/home.component';
 import { ProfileComponent } from './features/profile/profile.component';
 import { CreateBlogComponent } from './features/create-blog/create-blog.component';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'create-blog', component: CreateBlogComponent },
   {path:'aboutus',component:AboutUsComponent},
   { path: 'details/:id', component: BlogDetailComponent },
-  { path: 'profile', component: ProfileComponent}
-];
+  {path: 'login', component: LoginComponent, canActivate: [authGuard]}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
