@@ -1,5 +1,5 @@
 import { Component,inject } from '@angular/core';
-import { Post } from '../../data/post';
+import { Post } from '../../models/post';
 import { BlogService } from '../../services/blog.service';
 @Component({
   selector: 'app-home',

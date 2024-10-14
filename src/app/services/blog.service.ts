@@ -1,7 +1,7 @@
 // blog.service.ts
 import { Injectable } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
-import { Post } from '../data/post';
+import { Post } from '../models/post';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,9 @@ export class BlogService {
   protected blogList:Post[]=[];
 
 
-  url='http://localhost:3000/blogs';
+  url='http://localhost:8080/api/blogs/all';
+
+  urlId='http://localhost:8080/api/blogs/{id}';
 
   constructor() {}
 
@@ -19,7 +21,7 @@ export class BlogService {
     return await data.json() ?? [];
   }
   async getBlogById(id: number):Promise<Post | undefined> {
-    const data=await fetch(`${this.url}/${id}`);
+    const data=await fetch(`${this.urlId}/${id}`);
     return await data.json() ?? {};
   }
 }

@@ -12,7 +12,9 @@ export class CreateBlogComponent implements OnInit {
   posts_created={
     title: '',
     content: '',
-    category: '',
+    category: {
+      id: 1
+    },
     image: '', 
     categories: []
   }
@@ -59,7 +61,9 @@ export class CreateBlogComponent implements OnInit {
     const blogData = {
       title: this.posts_created.title,
       content: this.posts_created.content,
-      category: this.posts_created.category,
+      category: {
+        id: this.posts_created.category.id
+      },
       image: this.posts_created.image
     }
     console.log('Blog Data:', blogData);
