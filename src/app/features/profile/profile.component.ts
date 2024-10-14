@@ -10,11 +10,13 @@ interface Post {
 }
 
 interface User {
-  name: string;
-  email: string;
-  imageUrl: string;
+  id?: number;
+  username?: string;
+  email?: string;
+  imageUrl?: string;
+  password?:string;
   posts: Post[];
-  likedPostsCount: number;
+  // likedPostsCount: number;
 }
 
 @Component({
@@ -24,11 +26,11 @@ interface User {
 })
 export class ProfileComponent implements OnInit {
   user: User = {
-    name: 'Vishwala Sarma',
+    username: 'Vishwala Sarma',
     email: 'vishwala@example.com',
     imageUrl: 'https://via.placeholder.com/150',
     posts: [],
-    likedPostsCount: 5
+    // likedPostsCount: ,
   };
 
   constructor(private postService: PostService) { }
@@ -39,18 +41,13 @@ export class ProfileComponent implements OnInit {
 deleteBlog(id:any):void{
   this.postService.delete_blog(id).subscribe({
     next:(ress:any)=>{
-      console.log("Delete sucess");
+      console.log("Delete success");
     }
   })
 }
   fetchPosts(): void {
     this.postService.getPosts().subscribe(posts => this.user.posts = posts);
   }
-
-  editProfile(): void {
-    console.log('Edit Profile button clicked');
-  }
-
   
 
   editPost(index: number): void {

@@ -14,8 +14,13 @@ export class CreateBlogComponent implements OnInit {
     content: '',
     category: '',
     image: '', 
-    categories: ''
+    categories: []
   }
+
+  categories!: [{
+    id: number,
+    name: string
+  }];
 
 
   constructor(
@@ -27,9 +32,11 @@ export class CreateBlogComponent implements OnInit {
     this.fetchCategories();
   }
   fetchCategories() {
-    this.http.get('').subscribe(
+    this.http.get('http://localhost:8080/api/categories/all').subscribe(
       (response: any) => {
         console.log(response);
+        
+        this.categories = response;
       }
     )
   }

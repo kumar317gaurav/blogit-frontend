@@ -97,6 +97,14 @@
       "id": "e3a2",
       "email": "gouravkrsingh4096@gmail.com",
       "password": "1223456"
+    },
+    {
+      "id": "4db3",
+      "title": "Dhoni",
+      "content": "dcsdfgfgf",
+      "category": "",
+      "image": "",
+      "categories": ""
     }
   ],
   "posts_created": [
