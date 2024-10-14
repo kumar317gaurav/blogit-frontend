@@ -10,8 +10,8 @@
       <p>Posts: {{ user.posts.length }}</p>
       <p>Liked Posts: {{ user.likedPostsCount }}</p>
       <button (click)="editProfile()">Edit Profile</button>
-      <button routerLink="/create-blog">Create Post</button>
-<!-- <button (click)="deleteBlog(i)">delete</button> -->
+      <button ><a routerLink="/create-blog">Create Post</a></button>
+
     </div>
     <div class="user-posts">
         <h3 class="posts-title">User's Posts</h3>-
@@ -22,7 +22,6 @@
           <p class="card-text">{{ post.content }}</p>
           <p class="card-date">{{ post.date}}</p>
           <button (click)="editPost(i)" class="btn btn-primary">Edit</button>
-          <button (click)="deleteBlog(i)">Delete Post</button>
         </div>
       </div>
     </div>
