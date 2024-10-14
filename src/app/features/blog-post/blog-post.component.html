@@ -1,25 +1,11 @@
 <div class="container">
     <div class="post">
-        <div class="card-image">
-            <img [src]="post.image" alt="blog_image">
-        </div>
-        <div class="card-content">
-            <div class="blog-details">
-                <div class="post-d">
-                    <span><strong>Category: </strong>Music</span>
-                    <span class="text"><strong>Posted Date: </strong>{{post.date}}</span>
-                </div>
-                <div class="post-d">
-                    <span class="text"><strong>Author: </strong>{{post.author}}</span>
-                </div>
-            </div>
-            <h2 class="blog-title">
-                {{post.title}}
-            </h2>
-            <p class="postDesc">{{post.desc}}</p>
-            <div class="blog-cat">
-                <a class="button" [routerLink]="['/details',post.id]">Read blog</a>
-            </div>
+        <img [src]="post.imageUrl" alt="blog_image">
+        <div class="postContent">
+            <h2 class="postTitle">{{post.title}}</h2>
+            <h2 class="postAuthor">{{post.author}}</h2>
+        <p class="postDesc">{{post.desc}}</p>
+        <a [routerLink]="['/details',post.id]">Read blog</a>
         </div>
     </div>
 </div>

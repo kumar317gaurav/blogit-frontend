@@ -2,7 +2,7 @@
 import { Component, Input,OnInit,inject} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
-import { Post } from '../../data/post';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-blog-details',
