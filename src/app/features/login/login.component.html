@@ -3,18 +3,25 @@
 </div>
 
 <div class="login-container">
-
-  <h2>Login</h2>
-  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="user1.email" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" [(ngModel)]="user1.password" required>
-    </div>
-    <button type="submit" [disabled]="!loginForm.form.valid">Submit</button>
-  </form>
-  <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+  <div class="login">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user1.email" required>
+      </div>
+      <br>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user1.password" required>
+      </div>
+      <br>
+      <button type="submit" [disabled]="!loginForm.form.valid">Submit</button>
+    </form>
+    <br>
+    <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+  </div>
+  <div class="image-container">
+    <img src="https://img.freepik.com/premium-photo/person-is-using-laptop-with-blog-screen-visible-accompanied-by-cup-coffee-wicker-table_132358-78263.jpg?w=1060" alt="Background Image" />
+  </div>
 </div>

@@ -15,9 +15,10 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 2px solid teal;
+    border-bottom: 2px solid #a58c86;
     box-shadow: 0 0 8px 0;
     z-index: 1;
+    background-color: #f0e5e2;
 }
 
 nav ul{
