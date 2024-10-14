@@ -5,7 +5,7 @@ import { BlogService } from '../../services/blog.service';
 import { Post } from '../../models/post';
 
 @Component({
-  selector: 'app-blog-detail',
+  selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css']
 })

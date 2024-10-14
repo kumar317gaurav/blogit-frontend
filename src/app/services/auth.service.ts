@@ -8,10 +8,9 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
-
-  private postUrl = 'http://localhost:8080/api/blogs';
-
   private apiUrl = 'http://localhost:8080/api/auth';
+  private apiUrlRegister = 'http://localhost:8080/api/auth';
+  private postUrl = 'http://localhost:8080/api/blogs';
 
   constructor(private http: HttpClient, private router: Router) { }
 

@@ -7,6 +7,8 @@ import { Post } from '../models/post';
   providedIn: 'root'
 })
 export class BlogService {
+  protected blogList:Post[]=[];
+
 
   url='http://localhost:8080/api/blogs/all';
 

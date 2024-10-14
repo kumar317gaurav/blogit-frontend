@@ -12,10 +12,17 @@ export class CreateBlogComponent implements OnInit {
   posts_created={
     title: '',
     content: '',
-    category: '',
+    category: {
+      id: 1
+    },
     image: '', 
-    categories: ''
+    categories: []
   }
+
+  categories!: [{
+    id: number,
+    name: string
+  }];
 
 
   constructor(
@@ -27,9 +34,11 @@ export class CreateBlogComponent implements OnInit {
     this.fetchCategories();
   }
   fetchCategories() {
-    this.http.get('').subscribe(
+    this.http.get('http://localhost:8080/api/categories/all').subscribe(
       (response: any) => {
         console.log(response);
+        
+        this.categories = response;
       }
     )
   }
@@ -52,7 +61,9 @@ export class CreateBlogComponent implements OnInit {
     const blogData = {
       title: this.posts_created.title,
       content: this.posts_created.content,
-      category: this.posts_created.category,
+      category: {
+        id: this.posts_created.category.id
+      },
       image: this.posts_created.image
     }
     console.log('Blog Data:', blogData);
